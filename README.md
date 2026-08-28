@@ -1,4 +1,4 @@
-[![@sumiii135's Holopin board](https://holopin.me/sumiii135)](https://holopin.io/@sumiii135)
+board](https://holopin.me/sumiii135)](https://holopin.io/@sumiii135)
 
 <h1 align="center">Hi 👋, I'm Sumit Pandey</h1>
 <h3 align="center">A passionate developer</h3>
