@@ -1,3 +1,4 @@
+ 
 [![@sumiii135's Holopin board](https://holopin.me/sumiii135)](https://holopin.io/@sumiii135)
 
 <h1 align="center">Hi 👋, I'm Sumit Pandey</h1>
@@ -94,33 +95,3 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/sumiii135/sumiii135/output/github-snake-dark.svg" alt="GitHub Contribution Snake" />
 </p>
-name: Generate Snake
-
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - name: Generate Snake
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-
-      - name: Push Snake
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_DIR: dist
